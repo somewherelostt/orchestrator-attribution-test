@@ -1,0 +1,4 @@
+#!/bin/sh
+# Stand-in for commitlint: conventional commit subject required.
+head -1 "$1" | grep -Eq '^(feat|fix|docs|chore|test|refactor)(\(.+\))?: .+' || { echo "commitlint: subject must be a conventional commit" >&2; exit 1; }
+echo "commit-msg ran: $(head -1 "$1")" >> /Volumes/Vault/somewherelost/wt/attr-e2e/husky.log

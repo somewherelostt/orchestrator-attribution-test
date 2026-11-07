@@ -1,0 +1,3 @@
+#!/bin/sh
+# Stand-in for husky + lint-staged: log every run.
+echo "pre-commit ran in $(basename "$(git rev-parse --show-toplevel)")" >> /Volumes/Vault/somewherelost/wt/attr-e2e/husky.log
